@@ -22,6 +22,9 @@
   },
   "homepage": "https://github.com/survivejs-sessions/webpack-kosice-02-06-2017#readme",
   "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.1",
     "css-loader": "^0.28.4",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
