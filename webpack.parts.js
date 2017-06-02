@@ -42,7 +42,7 @@ exports.loadText = ({ include, exclude } = {}) => ({
 
         loader: 'demo-loader',
         options: {
-          text: 'more text', // TODO: capture this
+          text: 'more text',
         },
       },
     ],
