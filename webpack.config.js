@@ -49,7 +49,7 @@ const developmentConfig = () => {
   return Object.assign(
     {},
     commonConfig,
-    config
+    config,
   );
 };
 
@@ -59,4 +59,4 @@ module.exports = (env) => {
   }
 
   return commonConfig;
-}
+};
