@@ -6,7 +6,9 @@
   "scripts": {
     "lint:js": "eslint . --ignore-path .gitignore --cache",
     "start": "webpack-dev-server --env development",
-    "build": "webpack --env production"
+    "build": "webpack --env production",
+    "prepush": "npm test",
+    "test": "npm run lint:js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.3.0",
     "html-webpack-plugin": "^2.28.0",
+    "husky": "^0.13.4",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
   }
