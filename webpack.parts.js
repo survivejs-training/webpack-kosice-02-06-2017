@@ -32,6 +32,20 @@ exports.lintJavaScript = ({ include, exclude, options }) => ({
   },
 });
 
+exports.loadText = ({ include, exclude } = {}) => ({
+  module: {
+    rules: [
+      {
+        test: /\.txt$/,
+        include,
+        exclude,
+
+        loader: 'demo-loader',
+      },
+    ],
+  },
+});
+
 exports.loadCSS = ({ include, exclude } = {}) => ({
   module: {
     rules: [

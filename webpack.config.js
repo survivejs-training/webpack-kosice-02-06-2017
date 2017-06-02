@@ -24,9 +24,15 @@ const commonConfig = merge([
         title: 'Webpack demo',
       }),
     ],
+    resolveLoader: {
+      alias: {
+        'demo-loader': path.resolve(__dirname, 'loaders/demo-loader.js'),
+      },
+    },
   },
   parts.lintJavaScript({ include: PATHS.app }),
   parts.loadJavaScript({ include: PATHS.app }),
+  parts.loadText(),
 ]);
 
 function isVendor({ resource }) {

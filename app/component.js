@@ -1,7 +1,9 @@
-export default (text = 'Hello world') => {
+import demoText from './demo.txt';
+
+export default () => {
   const element = document.createElement('div');
 
-  element.innerHTML = text;
+  element.innerHTML = demoText;
 
   element.onclick = () => {
     import('./lazy').then((lazy) => {
