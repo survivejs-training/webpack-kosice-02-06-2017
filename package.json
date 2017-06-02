@@ -21,6 +21,9 @@
     "url": "https://github.com/survivejs-sessions/webpack-kosice-02-06-2017/issues"
   },
   "homepage": "https://github.com/survivejs-sessions/webpack-kosice-02-06-2017#readme",
+  "dependencies": {
+    "extract-text-webpack-plugin": "^2.1.0"
+  },
   "devDependencies": {
     "css-loader": "^0.28.4",
     "eslint": "^3.19.0",
