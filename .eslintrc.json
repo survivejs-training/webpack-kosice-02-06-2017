@@ -16,6 +16,7 @@
           "exports": "always-multiline",
           "functions": "ignore"
         }
-      ]
+      ],
+      "no-console": 0
     }
 }
