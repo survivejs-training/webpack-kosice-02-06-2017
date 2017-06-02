@@ -1,3 +1,4 @@
+const BabiliPlugin = require('babili-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 exports.devServer = ({ host, port } = {}) => ({
@@ -93,4 +94,10 @@ exports.loadJavaScript = ({ include, exclude }) => ({
 
 exports.generateSourceMaps = ({ type }) => ({
   devtool: type,
+});
+
+exports.minifyJavaScript = () => ({
+  plugins: [
+    new BabiliPlugin(),
+  ],
 });
