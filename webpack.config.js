@@ -54,6 +54,10 @@ const productionConfig = merge([
     ],
   },
   parts.minifyJavaScript(),
+  parts.setFreeVariable(
+    'process.env.NODE_ENV',
+    'production'
+  ),
 ]);
 
 const developmentConfig = merge([
@@ -69,6 +73,10 @@ const developmentConfig = merge([
     port: process.env.PORT,
   }),
   parts.loadCSS(),
+  parts.setFreeVariable(
+    'process.env.NODE_ENV',
+    'development'
+  ),
 ]);
 
 module.exports = (env) => {
