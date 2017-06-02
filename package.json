@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/survivejs-sessions/webpack-kosice-02-06-2017/issues"
   },
-  "homepage": "https://github.com/survivejs-sessions/webpack-kosice-02-06-2017#readme"
+  "homepage": "https://github.com/survivejs-sessions/webpack-kosice-02-06-2017#readme",
+  "devDependencies": {
+    "webpack": "^2.6.1"
+  }
 }
