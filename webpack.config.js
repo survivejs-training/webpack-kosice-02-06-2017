@@ -22,6 +22,19 @@ const commonConfig = {
       title: 'Webpack demo',
     }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        enforce: 'pre',
+
+        loader: 'eslint-loader',
+        options: {
+          emitWarning: true,
+        },
+      },
+    ],
+  },
 };
 
 const developmentConfig = () => {
@@ -43,6 +56,9 @@ const developmentConfig = () => {
       // unlike default `localhost`.
       host: process.env.HOST, // Defaults to `localhost`
       port: process.env.PORT, // Defaults to 8080
+
+      // Display error overlay
+      overlay: true,
     },
   };
 
