@@ -9,5 +9,6 @@
         }
       }
     ]
-  ]
+  ],
+  "plugins": ["syntax-dynamic-import"]
 }

@@ -6,8 +6,10 @@
     "env": {
       "browser": true
     },
+    "parser": "babel-eslint",
     "parserOptions": {
-        "sourceType": "module"
+        "sourceType": "module",
+        "allowImportExportEverywhere": true
     },
     "rules": {
       "comma-dangle": [
