@@ -22,12 +22,14 @@
   },
   "homepage": "https://github.com/survivejs-sessions/webpack-kosice-02-06-2017#readme",
   "devDependencies": {
+    "css-loader": "^0.28.4",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-import": "^2.3.0",
     "html-webpack-plugin": "^2.28.0",
     "husky": "^0.13.4",
+    "style-loader": "^0.18.1",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5",
     "webpack-merge": "^4.1.0"
