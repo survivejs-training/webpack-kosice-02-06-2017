@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint:js": "eslint . --ignore-path .gitignore --cache",
+    "lint:js": "eslint . --ignore-path .gitignore",
     "start": "webpack-dev-server --env development",
     "build": "webpack --env production",
     "prepush": "npm test",
