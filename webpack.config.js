@@ -42,6 +42,10 @@ const productionConfig = merge([
       maxEntrypointSize: 100000, // in bytes
       maxAssetSize: 100000, // in bytes
     },
+    plugins: [
+      new webpack.NamedModulesPlugin(),
+    ],
+    recordsPath: path.join(__dirname, 'records.json'),
   },
   parts.clean(PATHS.build),
   parts.extractCSS({ use: 'css-loader' }),
@@ -57,7 +61,7 @@ const productionConfig = merge([
       }),
     ],
   },
-  parts.minifyJavaScript(),
+  //parts.minifyJavaScript(),
   parts.setFreeVariable(
     'process.env.NODE_ENV',
     'production'
