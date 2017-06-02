@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "stats": "webpack --env production --profile --json > stats.json",
     "lint:js": "eslint . --ignore-path .gitignore",
     "start": "webpack-dev-server --env development",
     "build": "webpack --env production",
