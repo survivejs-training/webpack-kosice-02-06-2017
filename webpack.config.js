@@ -17,7 +17,7 @@ const commonConfig = merge([
     },
     output: {
       path: PATHS.build,
-      filename: '[name].js',
+      filename: '[name].[chunkhash].js',
     },
     plugins: [
       new HtmlWebpackPlugin({
@@ -38,11 +38,12 @@ function isVendor({ resource }) {
 const productionConfig = merge([
   {
     performance: {
-      hints: 'error', // 'error' or false are valid too
+      hints: 'warning', // 'error' or false are valid too
       maxEntrypointSize: 100000, // in bytes
       maxAssetSize: 100000, // in bytes
     },
   },
+  parts.clean(PATHS.build),
   parts.extractCSS({ use: 'css-loader' }),
   parts.generateSourceMaps({ type: 'source-map' }),
   {
@@ -50,6 +51,9 @@ const productionConfig = merge([
       new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
         minChunks: isVendor,
+      }),
+      new webpack.optimize.CommonsChunkPlugin({
+        name: 'runtime',
       }),
     ],
   },

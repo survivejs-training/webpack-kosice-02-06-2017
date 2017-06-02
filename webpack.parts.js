@@ -1,5 +1,6 @@
 const BabiliPlugin = require('babili-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
 exports.devServer = ({ host, port } = {}) => ({
@@ -45,11 +46,16 @@ exports.loadCSS = ({ include, exclude } = {}) => ({
   },
 });
 
+exports.clean = path => ({
+  plugins: [
+    new CleanWebpackPlugin([path]),
+  ],
+});
 
 exports.extractCSS = ({ include, exclude, use }) => {
   // Output extracted CSS to a file
   const plugin = new ExtractTextPlugin({
-    filename: '[name].css',
+    filename: '[name].[contenthash].css',
   });
 
   return {
